@@ -1,39 +1,43 @@
-$(document).ready(function(){
+$(document).ready(function() {
+// all code goes in here
 
-	var color = "white";
-		//selector //listener //callback
-	$('.box').on("click", function(){
-		$(this).addClass(color); // function body
-	})
+var box = $(".box");
+var color = 'white';
+var colors = 'red blue green yellow white';
 
-	$(".box").on('dblclick', function(){
-		$(this).removeClass(color);
-	})
+box.on('click', function() {
+	$(this).addClass(color);
+})
 
-	$('#reset').on('click', function(){
-		$('.box').removeClass('red blue green yellow white');
-	})
+box.on('dblclick', function(){
+  $(this).removeClass(colors);
+})
 
-	$('#red').on('click', function(){
-		color = 'red';
-	})
+$('#reset').on('click', function() {
+	box.removeClass(colors)
+})
 
-	$('#blue').on('click', function(){
-		color = 'blue';
-	})
 
-	$('#green').on('click', function(){
-		color = 'green';
-	})
 
-	$('#yellow').on('click', function(){
-		color = 'yellow';
-	})
+$('#red').on('click', function() {
+	color = 'red';
+})
 
-	$('#white').on('click', function(){
-		color = 'white';
-	})
+$('#blue').on('click', function() {
+	color = 'blue';
+})
 
+$('#green').on('click', function() {
+	color = 'green';
+})
+
+$('#yellow').on('click', function() {
+  color = 'yellow';
+})
+
+$('#white').on('click', function() {
+	color = 'white';
+})
 
 
 
